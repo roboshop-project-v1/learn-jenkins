@@ -11,6 +11,7 @@ pipeline {
                 sh 'echo second line'
                 sh 'echo "$CC"'
                 sh 'env'
+                sh 'pwd'
             }
         }
     stage('test') {
