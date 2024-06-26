@@ -22,5 +22,11 @@ pipeline {
                 echo 'code security'
             }
         }
+    stage('code deploy') {
+            steps {
+                echo 'code security'
+            }
+        }
+    
     }
 }
