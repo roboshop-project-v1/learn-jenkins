@@ -7,9 +7,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build'
-                echo 'second line'
-                echo "$CC"
+                sh 'echo Build'
+                sh 'echo second line'
+                sh 'echo "$CC"'
                 sh 'env'
             }
         }
