@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Build'
                 echo 'second line'
-                echo CC
+                echo "$CC"
             }
         }
     stage('test') {
