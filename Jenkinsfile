@@ -9,24 +9,10 @@ pipeline {
         }
     stage('test') {
             steps {
-                echo 'Test'
+                error 'intentional error'
             }
         }
-    stage('code quality check') {
-            steps {
-                echo 'code quality check'
-            }
-        }
-    stage('code security') {
-            steps {
-                echo 'code security'
-            }
-        }
-    stage('code deploy') {
-            steps {
-                echo 'code security'
-            }
-        }
+    
     
     }
 }
