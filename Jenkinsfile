@@ -18,8 +18,8 @@ pipeline {
         }
             steps {
                 echo 'intentional error'
-                echo '$CRED'
-                echo '$env'
+                echo '${CRED}'
+                echo '${env}'
             }
         }
     
