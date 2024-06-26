@@ -17,9 +17,11 @@ pipeline {
             CRED = credentials("username_pass_workstation")
         }
             steps {
+                sh '${CRED}'
                 echo 'intentional error'
                 echo '${CRED}'
                 echo '${env}'
+                sh 'printenv'
             }
         }
     
