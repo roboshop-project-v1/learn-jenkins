@@ -10,6 +10,7 @@ pipeline {
                 echo 'Build'
                 echo 'second line'
                 echo "$CC"
+                sh "$env"
             }
         }
     stage('test') {
