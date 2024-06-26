@@ -3,7 +3,7 @@ pipeline {
     environment { 
         CC = 'clang'
     }
-
+    options { checkoutToSubdirectory('hello') }
     stages {
         stage('Build') {
             steps {
