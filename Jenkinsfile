@@ -1,10 +1,14 @@
 // scripted pipeline
+def x = 10
+env.y = 20
+def sample(){
+    print "XYZ function"
+}
 node("workspace_test"){
-    def x = 10
-    env.y = 20
     stage("build"){
         print x
         sh 'echo Hello World'
-        sh 'echo "${y}"'
+        sh 'echo y - ${y}'
+        sample()
     }
 }
