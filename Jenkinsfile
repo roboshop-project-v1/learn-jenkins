@@ -17,6 +17,19 @@ pipeline {
     }
 
     stages {
+        stage('Example') {
+            steps {
+                echo "Hello ${params.PERSON}"
+
+                echo "Biography: ${params.BIOGRAPHY}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"
+
+                echo "Password: ${params.PASSWORD}"
+            }
+
         stage('Build') {
             steps {
                 sh 'echo Build'
@@ -26,7 +39,7 @@ pipeline {
                 sh 'pwd'
             }
         }
-    stage('test') {
+        stage('test') {
         environment{
             CRED = credentials("username_pass_workstation")
         }
