@@ -34,9 +34,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo Build'
+                input {
                 message "Should we continue?"
                 ok "Yes, we should."
                 submitter "alice,bob"
+                }
                 sh 'echo second line'
                 sh 'echo "$CC"'
                 sh 'env'
