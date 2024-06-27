@@ -47,6 +47,9 @@ pipeline {
             }
         }
         stage('test') {
+            when{
+                branch 'main' 
+            }
         environment{
             CRED = credentials("username_pass_workstation")
         }
