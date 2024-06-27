@@ -15,7 +15,7 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-    
+
     stages {
         stage('Example') {
             steps {
@@ -34,6 +34,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo Build'
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
                 sh 'echo second line'
                 sh 'echo "$CC"'
                 sh 'env'
