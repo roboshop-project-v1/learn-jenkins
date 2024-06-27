@@ -5,6 +5,6 @@ node("workspace_test"){
     stage("build"){
         print x
         sh 'echo Hello World'
-        sh 'echo ${y}'
+        sh 'echo "${y}"'
     }
 }
